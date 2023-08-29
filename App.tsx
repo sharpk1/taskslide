@@ -24,6 +24,10 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import KanbanCard from './components/molecules/KanbanCard';
+import KanbanBoard from './components/template/KanbanBoard';
+import LoginScreen from './components/template/LoginScreen';
+import PhoneRegistrationScreen from './components/organism/PhoneRegistrationScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,30 +75,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <Section title="Step One">
-          Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-          screen and then come back to see your edits.
-        </Section>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+        <PhoneRegistrationScreen />
       </ScrollView>
     </SafeAreaView>
   );
