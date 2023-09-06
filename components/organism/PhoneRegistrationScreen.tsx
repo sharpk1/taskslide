@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
+import {useTranslation} from 'react-i18next';
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,6 +13,7 @@ import PhoneInput from 'react-native-phone-number-input';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const PhoneRegistrationScreen = () => {
+  const {t} = useTranslation();
   const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
   const [value, setValue] = useState('');
   const [countryCode, setCountryCode] = useState('');
@@ -73,7 +75,7 @@ const PhoneRegistrationScreen = () => {
                   phoneInput.current?.getNumberAfterPossiblyEliminatingZero();
                 console.log(getNumberAfterPossiblyEliminatingZero);
               }}>
-              <Text style={styles.buttonText}>Send Code</Text>
+              <Text style={styles.buttonText}>{t('sendCode')}</Text>
             </TouchableOpacity>
             {/* <TouchableOpacity
               style={[styles.button, disabled ? {} : styles.redColor]}

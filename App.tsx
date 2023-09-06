@@ -6,6 +6,8 @@
  */
 
 import React from 'react';
+import i18n from 'i18next';
+import {initReactI18next} from 'react-i18next';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -28,6 +30,24 @@ import KanbanCard from './components/molecules/KanbanCard';
 import KanbanBoard from './components/template/KanbanBoard';
 import LoginScreen from './components/template/LoginScreen';
 import PhoneRegistrationScreen from './components/organism/PhoneRegistrationScreen';
+import en from './components/translations/en.json';
+import es from './components/translations/es.json';
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: en,
+    },
+    es: {
+      translation: es,
+    },
+  },
+  lng: 'en', // default language
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 type SectionProps = PropsWithChildren<{
   title: string;
