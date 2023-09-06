@@ -67,17 +67,13 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <PhoneRegistrationScreen />
-      </ScrollView>
-    </SafeAreaView>
+      <PhoneRegistrationScreen />
+    </>
   );
 }
 
