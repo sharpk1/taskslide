@@ -1,7 +1,8 @@
 {
-  "sendCode": "Enviar Código",
-  "countryCode": "Código del País",
+  "sendCode": "Enviar código",
+  "anotherOne": "Otro",
+  "countryCode": "Código de país",
   "value": "Valor",
-  "formattedValue": "Valor Formateado",
+  "formattedValue": "Valor formateado",
   "valid": "Válido"
 }
